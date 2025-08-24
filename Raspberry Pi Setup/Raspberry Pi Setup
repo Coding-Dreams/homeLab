@@ -1,1 +1,39 @@
+UNTIL STEP 8 MAKE SURE YOUR PI IS **NOT**!!!!! CONNECTED TO THE EXTERNAL ITNERNET. NO PORTFORWARDING!!!!
+->Very vulnerable until step 8
+
 1. Get arch linux
+2. login as alarm (default passwords alarm)
+        -> ssh alarm@[IP]
+        -> alarm
+3. su as root
+4 change pwds
+5. get nftables
+        ->disable iptables (systemctl disable iptables)
+        -> get nftable (sudo -S nftable)
+6. nano etc/nftables.conf
+    -> change ruleset to following:
+             flush ruleset
+
+            table inet filter {
+              chain input {
+                    type filter hook input priority filter; policy drop;
+                    #allow localhost ports
+                    iif "lo" accept
+
+                    #allow alarmpi
+                    tcp dport 22 accept
+              }
+              chain forward {
+                type filter hook forward priority filter;
+              }
+              chain output{
+                    type filter hook output priority filter;
+              }
+
+            }
+    ->This will drop all traffic except localhost and port 22 (alarmpi)
+    -> Will add nginx sutff soon
+7. systemctl enable nftables
+        -> make sure ruleset is correct after reboot with: nft list ruleset
+8. Setup NGINX (diff doc)
+
