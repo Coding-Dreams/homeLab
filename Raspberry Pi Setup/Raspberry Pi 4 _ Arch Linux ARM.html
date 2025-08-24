@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://archlinuxarm.org/public/images/favicon.ico">
+    
+    <title>Raspberry Pi 4 | Arch Linux ARM</title>
+    
+    <link rel="stylesheet" type="text/css" href="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/jquery.smartmenus.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/custom.min.css">
+    <link rel="stylesheet" type="text/css" href="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/default.min.css">
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script async="" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/google-analytics_analytics.js"></script><script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/jquery.min.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/jquery.smartmenus.min.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/jquery.smartmenus.bootstrap.min.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/datatables.min.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/highlight.pack.js"></script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/bootstrap-typeahead.min.js"></script>
+    <script>hljs.configure({languages: []});hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/date.format.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://archlinuxarm.org/"><img src="Raspberry%20Pi%204%20_%20Arch%20Linux%20ARM_files/alarm.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav sm" data-smartmenus-id="17560670097084387">
+                    <li><a href="https://archlinuxarm.org/about" class="has-submenu">About<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/about/contact">Contact</a></li>
+                    <li><a href="https://archlinuxarm.org/about/donate">Donate</a></li>
+                    <li><a href="https://archlinuxarm.org/about/downloads">Downloads</a></li>
+                    <li><a href="https://archlinuxarm.org/about/mirrors">Mirrors</a></li>
+                    <li><a href="https://archlinuxarm.org/about/package-signing">Package Signing</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms" class="has-submenu">Platforms<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7" class="has-submenu">ARMv7<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner" class="has-submenu">AllWinner<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/a10-olinuxino-lime">A10 OlinuXino Lime</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/a20-olinuxino-lime">A20 OlinuXino Lime</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/a20-olinuxino-lime2">A20 OlinuXino Lime2</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/a20-olinuxino-micro">A20 OlinuXino Micro</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/cubieboard">Cubieboard</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/cubieboard-2">Cubieboard 2</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/cubietruck">Cubietruck</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/allwinner/pcduino3">pcDuino3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/amlogic" class="has-submenu">Amlogic<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/amlogic/odroid-c1">ODROID-C1</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/arm" class="has-submenu">ARM<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/arm/versatile-express">Versatile Express</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/broadcom" class="has-submenu">Broadcom<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/broadcom/raspberry-pi-2">Raspberry Pi 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale" class="has-submenu">Freescale<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/cubox-i">CuBox-i</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/hobbitboard">Hobbitboard</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/nitrogen6x">Nitrogen6X</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/sabre-lite">SABRE Lite</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/udoo">UDOO</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/usb-armory">USB armory</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii">USB armory Mk II</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/utilite">Utilite</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/freescale/wandboard">Wandboard</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/marvell" class="has-submenu">Marvell<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/marvell/clearfog">ClearFog</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/rockchip" class="has-submenu">Rockchip<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/rockchip/asus-chromebit-cs10">Asus Chromebit CS10</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/rockchip/asus-chromebook-flip-c100p">Asus Chromebook Flip C100P</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11">Hisense Chromebook C11</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung" class="has-submenu">Samsung<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-hc1">ODROID-HC1</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-hc2">ODROID-HC2</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2">ODROID-U2</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-u3">ODROID-U3</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-x">ODROID-X</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-x2">ODROID-X2</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu">ODROID-XU</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu3">ODROID-XU3</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu4">ODROID-XU4</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/samsung-chromebook">Samsung Chromebook</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/samsung/samsung-chromebook-2">Samsung Chromebook 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti" class="has-submenu">TI<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beagleboard">BeagleBoard</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beagleboard-xm">BeagleBoard-xM</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beaglebone">BeagleBone</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black">BeagleBone Black</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black-wireless">BeagleBone Black Wireless</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beaglebone-green">BeagleBone Green</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/beaglebone-green-wireless">BeagleBone Green Wireless</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/chiliboard">ChiliBoard</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/ti/pandaboard">PandaBoard</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/xilinx" class="has-submenu">Xilinx<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv7/xilinx/zedboard">ZedBoard</a></li>
+                      </ul>
+                    </li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8" class="has-submenu">ARMv8<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/allwinner" class="has-submenu">AllWinner<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/allwinner/pine64">Pine64</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/amlogic" class="has-submenu">Amlogic<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/amlogic/odroid-c2">ODROID-C2</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/amlogic/odroid-n2">ODROID-N2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/arm" class="has-submenu">ARM<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/arm/juno">Juno</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/broadcom" class="has-submenu">Broadcom<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3">Raspberry Pi 3</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4">Raspberry Pi 4</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-zero-2">Raspberry Pi Zero 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/marvell" class="has-submenu">Marvell<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/marvell/espressobin">ESPRESSObin</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/marvell/macchiatobin">MACCHIATObin</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/mediatek" class="has-submenu">Mediatek<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/mediatek/acer-chromebook-r13">Acer Chromebook R13</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/qualcomm" class="has-submenu">Qualcomm<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/qualcomm/dragonboard-410c">DragonBoard 410c</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/rockchip" class="has-submenu">Rockchip<span class="sub-arrow">...</span></a>
+                      <ul class="dropdown-menu">
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/rockchip/asus-chromebook-flip-c101pa">Asus Chromebook Flip C101PA</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/rockchip/rock64">Rock64</a></li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/rockchip/samsung-chromebook-plus">Samsung Chromebook Plus</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/platforms/armv8/generic">Generic</a></li>
+                      </ul>
+                    </li>
+                      </ul>
+                    </li>
+                    <li><a href="https://archlinuxarm.org/packages">Packages</a></li>
+                    <li><a href="https://archlinuxarm.org/forum">Forum</a></li>
+                    <li><a href="https://archlinuxarm.org/wiki">Wiki</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right sm" data-smartmenus-id="17560670097092373">
+            <li>
+                <a href="https://archlinuxarm.org/about/donate">Donate</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Raspberry Pi 4</h1>
+<ul class="nav nav-tabs">
+  <li class=""><a data-toggle="tab" href="#overview" aria-expanded="false">Overview</a></li>
+  <li class="active"><a data-toggle="tab" href="#installation" aria-expanded="true">Installation</a></li>
+  
+</ul>
+<div class="tab-content">
+  <div id="overview" class="tab-pane fade">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>The Raspberry Pi 4 is the successor to the Raspberry Pi 3. It
+ builds upon the Pi 3 by upgrading the ARM cores to Cortex-A72, offering
+ up to 4GB RAM, USB 3.0, and gigabit ethernet.</p>
+
+<p>The Raspberry Pi 4 measures the same 85.60mm x 53.98mm x 17mm, with a
+ little overlap for the SD card and connectors which project over the 
+edges. The SoC is a Broadcom BCM2711. This contains a quad-core 
+Coretx-A72 running at 1.5GHz and a Videocore VI GPU.</p>
+
+      </div>
+      <div class="col-sm-3">
+        <dl class="dl-specs">
+              <dt>Architecture</dt>
+              <dd>ARMv8 Cortex-A72</dd>
+              <dt>Processor</dt>
+              <dd>Broadcom BCM2711 1.5GHz</dd>
+              <dt>RAM</dt>
+              <dd>4GB</dd>
+              <dt>SD</dt>
+              <dd>Micro SD</dd>
+              <dt>USB</dt>
+              <dd>4</dd>
+              <dt>Ethernet</dt>
+              <dd>Gigabit</dd>
+              <dt>Wireless</dt>
+              <dd>B/G/N, Bluetooth</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div id="installation" class="tab-pane fade active in">
+    <p><strong>Note:</strong> The Raspberry Pi 4 has higher power 
+requirements than the Raspberry Pi 3. A power supply rated at 3A is the 
+official recommendation. Using an insufficient power supply <em>will</em> result in random, inexplicable errors and filesystem corruption.</p>
+
+<p><strong>Note:</strong> The Raspberry Pi 4's USB Type-C power port is 
+not compliant with the USB Type-C specification, and it will not be able
+ to be powered by supplies that are compliant.</p>
+
+<h2 id="armv7installation">ARMv7 Installation</h2>
+
+<p>Use this installation if you require any of the vendor's kernel hacks, overlays, or closed-source GPU blobs and utilities.</p>
+
+<p>Replace <b>sdX</b> in the following instructions with the device name for the SD card as it appears on your computer.</p>
+
+<ol><li>Start fdisk to partition the SD card:
+<pre>fdisk /dev/sdX</pre>
+</li><li>At the fdisk prompt, delete old partitions and create a new one:
+<ol style="list-style-type: lower-alpha"><li>Type <b>o</b>. This will clear out any partitions on the drive.
+</li><li>Type <b>p</b> to list partitions. There should be no partitions left.
+</li><li>Type <b>n</b>, then <b>p</b> for primary, <b>1</b> for the first partition on the drive, press ENTER to accept the default first sector, then type <b>+200M</b> for the last sector.
+</li><li>Type <b>t</b>, then <b>c</b> to set the first partition to type W95 FAT32 (LBA).
+</li><li>Type <b>n</b>, then <b>p</b> for primary, <b>2</b> for the second partition on the drive, and then press ENTER twice to accept the default first and last sector.
+</li><li>Write the partition table and exit by typing <b>w</b>.</li></ol>
+</li><li>Create and mount the FAT filesystem:
+<pre>mkfs.vfat /dev/sdX1
+mkdir boot
+mount /dev/sdX1 boot</pre>
+</li><li>Create and mount the ext4 filesystem:
+<pre>mkfs.ext4 /dev/sdX2
+mkdir root
+mount /dev/sdX2 root</pre>
+</li><li>Download and extract the root filesystem (as root, not via sudo):
+<pre>wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-armv7-latest.tar.gz
+bsdtar -xpf ArchLinuxARM-rpi-armv7-latest.tar.gz -C root
+sync</pre>
+</li><li>Move boot files to the first partition:
+<pre>mv root/boot/* boot</pre>
+</li><li>Unmount the two partitions:
+<pre>umount boot root</pre>
+</li><li>Insert the SD card into the Raspberry Pi, connect ethernet, and apply 5V power.
+</li><li>Use the serial console or SSH to the IP address given to the board by your router.
+<ul><li>Login as the default user <i>alarm</i> with the password <i>alarm</i>.
+</li><li>The default root password is <i>root</i>.</li></ul>
+</li><li>Initialize the pacman keyring and populate the Arch Linux ARM <a href="https://archlinuxarm.org/about/package-signing">package signing</a> keys:
+<pre>pacman-key --init
+pacman-key --populate archlinuxarm</pre>
+</li></ol>
+
+<h2 id="aarch64installation">AArch64 Installation</h2>
+
+<p>This provides an installation using the mainline kernel and U-Boot.  
+Use this installation only if you have no dependencies on the closed 
+source vendor libraries shipped in the ARMv7 release.  This installation
+ has near full support for the device, including the VC4 graphics.</p>
+
+<ul><li>Follow the above instructions, substituting with the following tarball:
+<pre>http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz</pre><br>
+</li><li>Before unmounting the partitions, update /etc/fstab for the different SD block device compared to the Raspberry Pi 3:
+<pre>sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab</pre>
+</li></ul>
+
+  </div>
+</div>
+
+      <hr>
+      <p class="small text-center text-muted">Copyright ©2009-2022 Arch Linux ARM<br>
+      The registered trademark Linux® is used pursuant to a sublicense 
+from LMI, the exclusive licensee of Linus Torvalds, owner of the mark on
+ a world-wide basis.<br>
+      The Arch Linux™ name and logo are used under permission of the Arch Linux Project Lead.<br></p>
+    </div>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-24579207-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body></html>
