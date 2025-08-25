@@ -19,6 +19,9 @@ UNTIL STEP 8 MAKE SURE YOUR PI IS **NOT**!!!!! CONNECTED TO THE EXTERNAL ITNERNE
                     type filter hook input priority filter; policy drop;
                     #allow localhost ports
                     iif "lo" accept
+                    
+                    ct state established,related accept
+
 
                     #allow alarmpi
                     tcp dport 22 accept
@@ -36,4 +39,6 @@ UNTIL STEP 8 MAKE SURE YOUR PI IS **NOT**!!!!! CONNECTED TO THE EXTERNAL ITNERNE
 7. systemctl enable nftables
         -> make sure ruleset is correct after reboot with: nft list ruleset
 8. Setup NGINX (diff doc)
+
+#author Niccolo von Bueren
 
